@@ -34,11 +34,11 @@ set showmatch
 syntax enable
 
 if !empty(glob("~/.vim/plugged/vim-monokai/colors/monokai.vim"))
-   colorscheme monokai
+   " colorscheme monokai
 else
-   colorscheme desert
+   " colorscheme desert
 endif
-set background=dark
+" set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -86,6 +86,9 @@ set wrap "Wrap lines
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+
+" Use tabs when editing makefiles
+autocmd FileType make setlocal noexpandtab
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
