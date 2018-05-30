@@ -16,8 +16,11 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
-"Always show current position
+" Always show current position
 set ruler
+
+" Show Linenumbers
+set number
 
 " Ignore case when searching
 set ignorecase
@@ -31,12 +34,19 @@ set hlsearch
 " Show matching brackets when text indicator is over them
 set showmatch
 
+" Syntaxhighlighting
 syntax enable
+
+" Colorcolumn at 110 Characters
+set colorcolumn=110
+
+colorscheme delek
+highlight ColorColumn ctermbg=gray
 
 if !empty(glob("~/.vim/plugged/vim-monokai/colors/monokai.vim"))
    " colorscheme monokai
 else
-   " colorscheme desert
+   " colorscheme delek
 endif
 " set background=dark
 
