@@ -3,7 +3,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')
-Plug 'crusoexia/vim-monokai'
+Plug 'rakr/vim-one'
 call plug#end()
 
 " Sets how many lines of history VIM has to remember
@@ -38,17 +38,11 @@ set showmatch
 syntax enable
 
 " Colorcolumn at 110 Characters
-set colorcolumn=110
+set colorcolumn=120
 
-colorscheme delek
+colorscheme one
 highlight ColorColumn ctermbg=gray
-
-if !empty(glob("~/.vim/plugged/vim-monokai/colors/monokai.vim"))
-   " colorscheme monokai
-else
-   " colorscheme delek
-endif
-" set background=dark
+set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
